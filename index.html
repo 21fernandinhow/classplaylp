@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ClassPlay</title>
+        <link href="./css/style.css" rel="stylesheet">
+
+        <!--Aos config-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--Home-->
+        <div id="home">
+            <div>
+                <img class="logo" src="./images/logo.png" alt="logo">
+            </div>
+            <div class="intro-text" data-aos="fade-left" data-aos-duration="2000">
+                <h1>Jogar ou estudar?</h1>
+                <h2>Você pode fazer os dois!</h2>
+                <h3>Conheça a solução que vai mudar sua experiência de estudos.</h3>
+                <a class="btn-outline" href="#about">Saiba mais</a>
+            </div>
+        </div>
+
+        <!--About-->
+        <div id="about">
+            <h2>Nós somos a ClassPlay!</h2>
+            <div class="about-sections">
+                <div class="about-item">
+                    <h3>Insatisfeito com sua escola?</h3>
+                    <p>Com nosso app, vamos mudar isso! As tarefas escolares estarão dentro de nossa plataforma gamificada, 
+                        onde você ganhará coins a cada atividade que você fizer</p>
+                </div>
+                <div class="about-item">
+                    <h3>Quanto mais coins, melhor!</h3>
+                    <p>Esses coins podem ser usados para trocar por recompensas dentro do nosso "Game". Você vai se surpreender com o que podemos oferecer</p>
+                </div>
+            </div>
+            <div class="about-sections">
+                <div class="about-item">
+                    <h3>Explore o mundo, aventureiro</h3>
+                    <p>Você poderá desbloquear "side-quests" com conhecimentos que você não aprende na escola, como educação financeira, moda ou programação</p>
+                </div>
+                <div class="about-item">
+                    <h3>O importante é você</h3>
+                    <p>Será uma experiência focada no aluno. Ranqueamentos, desafios, toda a nossa plataforma será moldada para te proporcionar a melhor experiência</p>
+                </div>
+            </div>
+            <div class="prototipe">
+                <a class="btn" href="./images/prototipe.pdf" target="_blank">Ver protótipo (pdf)</a>
+                <a class="btn" href="https://www.figma.com/file/PcFc7WRrXnjQcipowXnKER/PROT%C3%93TIPO-APLICATIVO-EDUCA%C3%87%C3%83O?node-id=0%3A1" target="_blank">Ver protótipo (figma)</a>
+            </div>
+        </div>
+
+        <!--Action-->
+        <div id="action">
+            <div>
+                <h2>Quer o ClassPlay em sua escola?</h2>
+                <p>Insira seus dados no formulário abaixo para entrar em nossa lista de interessados, e entraremos em contato.</p>
+                <br>
+            </div>
+            <div>
+                <form
+                    action="https://usebasin.com/f/8b13b539d70f"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    id="form"
+                    >
+                    <div class="form-input">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" required/>
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required />
+                    </div>
+                    <button type="submit" class="btn-form">Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+        <!--Footer-->
+        <footer id="footer">
+            <p>Copyright ClassPlay - 2023</p>
+        </footer>
+
+        <!-- AOS Script-->
+        <script>
+            AOS.init();
+        </script>
+
+    </body>
+
+</html>

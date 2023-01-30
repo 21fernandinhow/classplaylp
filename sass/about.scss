@@ -1,0 +1,39 @@
+#about{
+    @extend .flex-central;
+    min-height: 60vh;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: #1c1c1c;
+    h2{
+        margin: 20px;
+        font-size: 3rem;
+        text-align: center;
+        color: #FF5757;
+    }
+    .about-sections{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        .about-item{
+            background-color: #ffffff;
+            max-width: 20rem;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+    .prototipe{
+        margin-top: 20px;
+        margin-bottom: 45px;
+        @extend .flex-central;
+        flex-wrap: wrap;
+        .btn{
+            margin: 10px;
+        }
+    }
+}
