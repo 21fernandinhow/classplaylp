@@ -13,8 +13,11 @@
 
 //Default Settings
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #FF5757 #1F1347;
 }
 html {
     scroll-behavior: smooth;
@@ -23,14 +26,24 @@ body{
     font-family: 'Roboto', sans-serif;
     color: #f5f5f5;
     min-height: 100vh;
-    max-width: 100%;
+}
+body::-webkit-scrollbar {
+    width: 12px;               
+}
+body::-webkit-scrollbar-track {
+    background: #FF5757;        
+}  
+body::-webkit-scrollbar-thumb {
+    background-color: #1F1347;    
+    border-radius: 20px;      
+    border: 1px solid #FF5757;  
 }
 .btn{
     color: #f5f5f5;
     background-color: #FF5757;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 20px;
+    padding: 12px 24px;
+    border-radius: 30px;
     &:hover{
         background-color: #1F1347;
         color: #ffffff;
@@ -41,8 +54,8 @@ body{
 .btn-outline{
     color: #FF5757;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 20px;
+    padding: 12px 36px;
+    border-radius: 30px;
     border: 1px solid #FF5757;
     &:hover{
         background-color: #FF5757;
@@ -69,6 +82,11 @@ body{
             h2{
                 font-size: 1.5rem;
             }
+        }
+    }
+    #action{
+        #form{
+            flex-direction: column;
         }
     }
 }

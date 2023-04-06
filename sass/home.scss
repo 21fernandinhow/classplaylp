@@ -1,11 +1,10 @@
 #home{
     @extend .flex-central;
     min-height: 100vh;
-    padding: 30px;
+    padding: 20px;
     background-color: #1F1347;
     .logo{
         max-width: 25rem;
-        margin-right: 50px;
         animation: float 5s ease-in-out infinite;
     }
     h1{
