@@ -2,7 +2,6 @@
 #home {
   min-height: 100vh;
   padding: 20px;
-  background-color: #1F1347;
 }
 #home .logo {
   max-width: 25rem;
@@ -32,17 +31,16 @@
   }
 }
 #about {
-  min-height: 70vh;
+  min-height: 100vh;
   flex-direction: column;
-  background-color: #f5f5f5;
-  color: #1c1c1c;
   max-width: 100vw;
+  background-color: var(--secondary-color);
 }
 #about h2 {
   margin: 20px;
   font-size: 3rem;
   text-align: center;
-  color: #FF5757;
+  color: var(--highlight-color);
 }
 #about .about-sections {
   display: flex;
@@ -51,9 +49,10 @@
   flex-wrap: wrap;
 }
 #about .about-sections .about-item {
-  background-color: #ffffff;
   max-width: 350px;
   border-radius: 15px;
+  border-left: 2px groove var(--highlight-color);
+  background-color: var(--terciary-color);
   padding: 20px;
   margin: 10px;
 }
@@ -63,7 +62,7 @@
 #about .about-sections .about-item:hover {
   background-color: #FF5757;
   color: #ffffff;
-  transition: 0.2s;
+  transition: 0.6s;
 }
 #about .prototipe {
   margin-top: 20px;
@@ -76,55 +75,82 @@
 
 #action {
   flex-direction: column;
-  min-height: 20vh;
-  background-color: #FF5757;
-  color: #f5f5f5;
+  background-color: var(--terciary-color);
+  min-height: 45vh;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 #action h2 {
-  margin-bottom: 10px;
+  margin: 10px;
+}
+#action p {
+  margin: 10px;
 }
 #action #form {
   flex-wrap: wrap;
+  margin: 10px;
 }
 #action #form .form-input {
   padding: 10px;
 }
 #action #form .form-input label {
-  margin-right: 5px;
   font-size: 16px;
 }
 #action #form .form-input input {
-  height: 30px;
+  padding: 10px;
+  margin: 5px;
+  min-width: 250px;
   border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--highlight-color);
   border: none;
+  caret-color: var(--highlight-color);
+}
+#action #form .form-input input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
 #action #form .btn-form {
-  color: #f5f5f5;
   text-decoration: none;
-  text-align: center;
-  background: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 1px solid #f5f5f5;
+  padding: 10px 30px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--contrast-color);
+  cursor: pointer;
 }
 #action #form .btn-form:hover {
-  background-color: #f5f5f5;
-  color: #FF5757;
+  background-color: var(--highlight-color);
+  color: var(--contrast-color);
   font-weight: bold;
   transition: 0.6s;
 }
 
 #footer {
-  padding: 15px;
   text-align: center;
-  background-color: #1F1347;
+  background-color: var(--terciary-color);
+}
+#footer p {
+  padding: 20px;
+  min-width: 100%;
+  background-color: var(--highlight-color);
+  border-radius: 15px 15px 0px 0px;
 }
 #footer p:hover {
   font-size: 18px;
   text-decoration: underline;
   transition: 0.4s;
+}
+
+:root {
+  --primary-color: #1f1347;
+  --secondary-color: #170D3D;
+  --terciary-color: #110933;
+  --quarternary-color: #0B0629;
+  --highlight-color: #ff5757;
+  --contrast-color: #fff;
 }
 
 .flex-central, #home, #about, #about .prototipe, #action, #action #form {
@@ -138,7 +164,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: #FF5757 #1F1347;
+  scrollbar-color: var(--highlight-color) var(--primary-color);
 }
 
 html {
@@ -147,7 +173,8 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #f5f5f5;
+  color: var(--contrast-color);
+  background-color: var(--primary-color);
   min-height: 100vh;
 }
 
@@ -156,39 +183,44 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #FF5757;
+  background: var(--highlight-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #1F1347;
+  background-color: var(--primary-color);
   border-radius: 20px;
-  border: 1px solid #FF5757;
+  border: 1px solid var(--highlight-color);
+}
+
+::selection {
+  background-color: var(--highlight-color);
+  color: var(--contrast-color);
 }
 
 .btn {
-  color: #f5f5f5;
-  background-color: #FF5757;
+  color: var(--contrast-color);
+  background-color: var(--highlight-color);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 30px;
 }
 .btn:hover {
-  background-color: #1F1347;
-  color: #ffffff;
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
   font-weight: bold;
   transition: 0.6s;
 }
 
 .btn-outline {
-  color: #FF5757;
+  color: var(--highlight-color);
   text-decoration: none;
   padding: 12px 36px;
   border-radius: 30px;
-  border: 1px solid #FF5757;
+  border: 1px solid var(--highlight-color);
 }
 .btn-outline:hover {
-  background-color: #FF5757;
-  color: #f5f5f5;
+  background-color: var(--highlight-color);
+  color: var(--contrast-color);
   font-weight: bold;
   transition: 0.6s;
 }

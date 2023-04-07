@@ -4,6 +4,17 @@
 @import './about.scss';
 @import './action.scss';
 
+//Colors
+:root{
+    --primary-color: #1f1347;
+    --secondary-color: #170D3D;
+    --terciary-color: #110933;
+    --quarternary-color: #0B0629;
+    --highlight-color: #ff5757;
+    --contrast-color: #fff;
+}
+
+
 //Extends
 .flex-central{
     display: flex;
@@ -17,49 +28,54 @@
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
-    scrollbar-color: #FF5757 #1F1347;
+    scrollbar-color: var(--highlight-color) var(--primary-color);
 }
 html {
     scroll-behavior: smooth;
 } 
 body{
     font-family: 'Roboto', sans-serif;
-    color: #f5f5f5;
+    color: var(--contrast-color);
+    background-color: var(--primary-color);
     min-height: 100vh;
 }
 body::-webkit-scrollbar {
     width: 12px;               
 }
 body::-webkit-scrollbar-track {
-    background: #FF5757;        
+    background: var(--highlight-color);        
 }  
 body::-webkit-scrollbar-thumb {
-    background-color: #1F1347;    
+    background-color: var(--primary-color);    
     border-radius: 20px;      
-    border: 1px solid #FF5757;  
+    border: 1px solid var(--highlight-color); 
+}
+::selection{
+    background-color: var(--highlight-color);
+    color: var(--contrast-color);
 }
 .btn{
-    color: #f5f5f5;
-    background-color: #FF5757;
+    color: var(--contrast-color);
+    background-color: var(--highlight-color);
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 30px;
     &:hover{
-        background-color: #1F1347;
-        color: #ffffff;
+        background-color: var(--contrast-color);
+        color: var(--primary-color);
         font-weight: bold;
         transition: 0.6s;
     }
 }
 .btn-outline{
-    color: #FF5757;
+    color: var(--highlight-color);
     text-decoration: none;
     padding: 12px 36px;
     border-radius: 30px;
-    border: 1px solid #FF5757;
+    border: 1px solid var(--highlight-color);
     &:hover{
-        background-color: #FF5757;
-        color: #f5f5f5;
+        background-color: var(--highlight-color);
+        color: var(--contrast-color);
         font-weight: bold;
         transition: 0.6s;
     }

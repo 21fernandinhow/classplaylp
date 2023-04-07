@@ -1,15 +1,14 @@
 #about{
     @extend .flex-central;
-    min-height: 70vh;
+    min-height: 100vh;
     flex-direction: column;
-    background-color: #f5f5f5;
-    color: #1c1c1c;
     max-width: 100vw;
+    background-color: var(--secondary-color);
     h2{
         margin: 20px;
         font-size: 3rem;
         text-align: center;
-        color: #FF5757;
+        color: var(--highlight-color);
     }
     .about-sections{
         display: flex;
@@ -17,9 +16,10 @@
         justify-content: center;
         flex-wrap: wrap;
         .about-item{
-            background-color: #ffffff;
             max-width: 350px;
             border-radius: 15px;
+            border-left: 2px groove var(--highlight-color);
+            background-color: var(--terciary-color);
             padding: 20px;
             margin: 10px;
             p{
@@ -28,7 +28,7 @@
             &:hover{
                 background-color: #FF5757;
                 color: #ffffff;
-                transition: 0.2s;
+                transition: 0.6s;
             }
         }
     }
